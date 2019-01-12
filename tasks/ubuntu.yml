@@ -8,6 +8,7 @@
 - name: Import YARN APT key
   apt_key:
     url: "{{ yarn_debian_repo_gpg_key_url }}"
+    id: "{{ yarn_debian_repo_gpg_id }}"
     state: present
 
 - name: Install YARN APT repo
